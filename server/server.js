@@ -1,5 +1,5 @@
 const express = require("express");
-const knex = require("./knex");
+const knex = require("../knex");
 const app = express();
 app.use(express.json());
 
@@ -13,7 +13,7 @@ app.get("/api/notes", async (_, res) => {
     }
 });
 
-const port = 9999 || process.env.PORT;
-app.listen(9999, () => {
-    console.log(`🎉 Server running at https://localhost:${port}!`);
+const port = 6000|| process.env.PORT;
+app.listen(6000, () => {
+    console.log(`Server running at https://localhost:${port}`);
 });
