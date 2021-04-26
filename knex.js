@@ -1,3 +1,5 @@
+//const { config } = require('dotenv/types');
+
 const knex = require('knex') ({
     client: 'pg',
     connection: {
