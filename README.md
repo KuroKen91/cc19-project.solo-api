@@ -1,0 +1,1 @@
+# cc19-project.solo-api
