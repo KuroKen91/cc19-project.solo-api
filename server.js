@@ -46,19 +46,14 @@ app.patch('/api/final_fantasy/:id', async (req, res) => {
   });
 
   //Delete a row of a certain game's info
-  app.delete('/api/final_fantasy/:title', async (req, res) => {
-    const { game } = req.params;
+  app.delete('/api/final_fantasy/:id', async (req, res) => {
+    const id = req.params.id;
 
     try {
-        if (game) {
-            const ids = await knex('final_fantasy').where( { game } ).del();
-            knex('final_fantasy').select();
-            res.status(200).json(console.log("GAME & INFO DELETED"));
-        } else {
-            res.status(404).json(console.log("GAME NOT FOUND!!!"))
-        }
+        await knex('final_fantasy').where('id', id ).del();
+        res.status(200).json(console.log("GAME & INFO DELETED"));
     } catch (err) {
-      res.status(500).json({message: "Error updating new post", error: err})
+        res.status(500).json({message: "Error updating new post", error: err})
     }
   });
 
