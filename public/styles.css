@@ -1,0 +1,14 @@
+body {
+    background-color: lightblue;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.data-display {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: lightgreen;
+    border-radius: 50px 0 0 50px;
+    border: black solid 5px;
+}
+

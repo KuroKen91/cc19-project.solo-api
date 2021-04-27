@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/KuroKen91/cc19-project.solo-api#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
     "dotenv": "^8.2.0",
