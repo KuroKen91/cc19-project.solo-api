@@ -34,7 +34,7 @@ app.get("/api/final_fantasy/:title", async (req, res) => {
 //Update Game Data
 app.patch('/api/final_fantasy/:id', async (req, res) => {
     const id = req.params.id
-
+  
     try {
         await knex('final_fantasy').where('id', id).update(req.body)
         res.status(200);

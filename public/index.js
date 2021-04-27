@@ -1,39 +1,48 @@
-const gameDatas =  "./games.json";
 
+function fetchData (){
+    fetch("http://localhost:9999/api/final_fantasy").then(response => {
+        return response.json();
+    })
+        .then(data => {
+            document.querySelector('#app').innerHTML = data[0].title + "\n" + " Platform: " + data[0].platform + " Release Date: " + data[0].releasedate;
+        console.log(data);
+    });
+}
 
- async function getAPI(URL) {
-     const response = await fetch(URL);
-     console.log(response);
-     if (response) {
-         hideloader();
-     }
-     display(response);
- }
+fetchData();
 
- getAPI(gameDatas)
- .then(response => response.json())
- .then(titles => showtitles(titles.title));
+//  async function getAPI(URL) {
+//      const response = await fetch(URL);
+     
+//      if (response) {
+//          hideloader();
+//      }
+//      display(response);
+//  }
 
- showTitles = titles => {
-     const titlesDiv = document.querySelector('#')
- }
+// getAPI(apiURL)
+ 
 
- function hideloader() {
-     //document.getElementById('load-gauge').style.display = 'none';
- }
+//  showTitles = titles => {
+//      const titlesDiv = document.querySelector('#')
+//  }
 
- let summonButton = document.getElementById("summon-button");
+//  function hideloader() {
+//      //document.getElementById('load-gauge').style.display = 'none';
+//  }
 
- summonButton.addEventListener("click", () => {
-        location.href = "http://localhost:9999/api/final_fantasy"
- });
+//  let summonButton = document.getElementById("summon-button");
 
- function display(data) {
-    let gameDataDisplay = [
-        document.getElementById
-    ]
+//  summonButton.addEventListener("click", () => {
+//         location.href = "http://localhost:9999/api/final_fantasy"
+//  });
+
+//  function display(data) {
+//     let gameDataDisplay = [
+//         document.getElementById
+//     ]
         
- }
+//  }
 
 
 
@@ -44,8 +53,8 @@ const gameDatas =  "./games.json";
 
 
 
-// module.exports = {
-//     games
-// };
+// // module.exports = {
+// //     games
+// // };
 
 

@@ -12,3 +12,11 @@ body {
     border: black solid 5px;
 }
 
+#app {
+    text-align: center;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
